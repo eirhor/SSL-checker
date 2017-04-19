@@ -16,13 +16,18 @@ namespace Bulk
         private static void Main()
         {
             const string apiUrl = "https://api.ssllabs.com/api/v2";
-            const string inputFileName = "sites.txt";
-            const string outputFileName = "response.csv";
+
+            Console.WriteLine("File path to file with sites.");
+            var inputFileName = Console.ReadLine();
+
+            Console.WriteLine("File path to output file.");
+            var outputFileName = Console.ReadLine();
+
             const string delimiter = ";";
             var sslService = new SSLLabsApiService(apiUrl);
             var serviceStatus = sslService.Info();
 
-            if (serviceStatus.Online)
+            if (serviceStatus.Online && inputFileName != null)
             {
                 if (File.Exists(inputFileName))
                 {
@@ -44,6 +49,9 @@ namespace Bulk
                         Console.WriteLine($"Finished analyzing {response.SiteUrl} with grade: {response.Grade}");
                     }
 
+                    if (outputFileName == null)
+                        outputFileName = "output.csv";
+
                     if (File.Exists(outputFileName))
                         File.Delete(outputFileName);
 
@@ -57,20 +65,20 @@ namespace Bulk
                     }
                     Console.WriteLine("CSV generated.");
                     Console.WriteLine("Press any key to exit.");
-                    System.Console.ReadKey();
+                    Console.ReadKey();
                 }
                 else
                 {
                     Console.WriteLine("ERROR: Could not find sites.txt file.");
                     Console.WriteLine("Press any key to exit.");
-                    System.Console.ReadKey();
+                    Console.ReadKey();
                 }
             }
             else
             {
                 Console.WriteLine("ERROR: SSL Labs API is unreachable.");
                 Console.WriteLine("Press any key to exit.");
-                System.Console.ReadKey();
+                Console.ReadKey();
             }
         }
     }
