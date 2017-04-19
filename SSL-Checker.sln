@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSL Checker", "src\SSL-Checker\SSL-Checker.csproj", "{622C4D9A-3777-4FDC-A92D-9F0279579A9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulk", "Bulk\Bulk.csproj", "{13161429-FA7C-4C81-B229-578F06566198}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{622C4D9A-3777-4FDC-A92D-9F0279579A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{622C4D9A-3777-4FDC-A92D-9F0279579A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{622C4D9A-3777-4FDC-A92D-9F0279579A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{622C4D9A-3777-4FDC-A92D-9F0279579A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13161429-FA7C-4C81-B229-578F06566198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13161429-FA7C-4C81-B229-578F06566198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13161429-FA7C-4C81-B229-578F06566198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13161429-FA7C-4C81-B229-578F06566198}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
